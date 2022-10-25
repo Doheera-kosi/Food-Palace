@@ -19,8 +19,8 @@
 - Make JavaScript code asynchronous.
 - Perform a code review for a team member.
 
-> Description the project.
-This JavaScript capstone project (remember what they are?) is about building your own web application based on an external API. We will use a selected API that provides data about a topic that we like and then build the webapp around it. This webapp is have 2 or 3 user interfaces (depending on the size of your team):
+## Description the project.
+> This JavaScript capstone project (remember what they are?) is about building your own web application based on an external API. We will use a selected API that provides data about a topic that we like and then build the webapp around it. This webapp is have 2 or 3 user interfaces (depending on the size of your team):
 
 - [x] A home page showing a list of items that you can "like."
 - [x] A popup window with more data about an item that you can use to comment on it or reserve it   for a period of time.
