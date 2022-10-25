@@ -66,11 +66,11 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Evans Kupour**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Doheera-kosi/)
+- Twitter: [@twitterhandle](https://twitter.com/KupourE)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/evans-kupour-1879421a3/)
 
 👤 **Author2**
 
