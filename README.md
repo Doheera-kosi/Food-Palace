@@ -28,12 +28,15 @@
 
 ## Built With
 
-- Major languages
-- HTML, CSS, & JavaScript
+### Major languages
+- [x] HTML, 
+- [x] CSS, & 
+- [x] JavaScript
 
-- Frameworks
-- Technologies used
-
+### Frameworks
+- None
+### Technologies used
+- None
 ## Live Demo (if available)
 
 [Live Demo Link](https://livedemo.com)
