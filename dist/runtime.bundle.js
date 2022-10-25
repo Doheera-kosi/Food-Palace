@@ -123,7 +123,7 @@
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkspace_tourism_app"] = self["webpackChunkspace_tourism_app"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkkanban_board"] = self["webpackChunkkanban_board"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();

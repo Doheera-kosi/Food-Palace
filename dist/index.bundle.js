@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkspace_tourism_app"] = self["webpackChunkspace_tourism_app"] || []).push([["index"],{
+(self["webpackChunkkanban_board"] = self["webpackChunkkanban_board"] || []).push([["index"],{
 
 /***/ "./src/index.js":
 /*!**********************!*\
@@ -14,7 +14,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://space-tourism-app/./src/index.js?");
+eval("\n\n//# sourceURL=webpack://kanban-board/./src/index.js?");
 
 /***/ })
 
