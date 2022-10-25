@@ -1,2 +1,2 @@
 # kanban-board
-JavaScript Grop
+JavaScript Group Capstone Project
