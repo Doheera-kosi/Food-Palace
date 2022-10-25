@@ -29,7 +29,7 @@
 ## Built With
 
 ### Major languages
-- [x] HTML, 
+- [x] HTML [x] CSS [x] JavaScript
 - [x] CSS, & 
 - [x] JavaScript
 
