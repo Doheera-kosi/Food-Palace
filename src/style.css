@@ -5,7 +5,6 @@ html {
   box-sizing: border-box;
 }
 
-
 header {
   padding: 1rem;
   background: rgb(180, 201, 180);
@@ -16,7 +15,6 @@ nav {
   flex-direction: row;
   justify-content: space-between;
 }
-
 
 .nav_items {
   display: flex;
@@ -29,7 +27,7 @@ nav {
   width: 80%;
   display: grid;
   grid-template-columns: repeat(3, 3fr);
-  margin: auto;
+  margin: 5rem auto;
   background: rgb(172, 169, 169);
   padding: 1rem;
   place-items: center;
@@ -40,10 +38,11 @@ nav {
   display: flex;
   flex-direction: column;
   border: 1px solid gold;
-  width: 60%;
-  padding: 0rem 1rem;
+  width: 70%;
+  padding: 2rem 1rem;
   margin: 1rem 0rem;
   gap: 1rem;
+  border-radius: 20px;
 }
 
 .space-like {
@@ -65,7 +64,14 @@ nav {
   gap: 1rem;
 }
 
-.reserve, 
+.reserve,
 .comment {
   height: 2rem;
+}
+
+footer {
+  display: flex;
+  margin-top: 4rem;
+  justify-content: space-around;
+  height: 4rem;
 }
