@@ -5,6 +5,24 @@ html {
   box-sizing: border-box;
 }
 
+.container {
+  width: 80%;
+  margin: auto;
+}
+
 header {
   background: green;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav_items {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
 }
