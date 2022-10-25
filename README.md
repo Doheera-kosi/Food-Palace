@@ -29,8 +29,8 @@
 ## Built With
 
 ### Major languages
-- [x] HTML [x] CSS [x] JavaScript
-- [x] CSS, & 
+- [x] HTML
+- [x] CSS
 - [x] JavaScript
 
 ### Frameworks
