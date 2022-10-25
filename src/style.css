@@ -11,6 +11,7 @@ html {
 }
 
 header {
+  padding: 1rem;
   background: green;
 }
 
