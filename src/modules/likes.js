@@ -6,7 +6,6 @@ const getLikes = async () => {
   const data = await res.json();
   return data;
 };
-getLikes();
 export default getLikes;
 
 export const addLikes = async (id) => {
