@@ -22,7 +22,7 @@
   </header>
 
   <section id="container" class="container">
-    <div id="card-a" class="card-a">
+    <!-- <div id="card-a" class="card-a">
       <img src="https://www.themealdb.com/images/category/beef.png" alt="Picture">
       <div class="space-like">
         <p>Space</p>
@@ -81,9 +81,48 @@
         <button type="button" id="comment" class="comment">Comments</button>
         <button type="button" id="reserve" class="reserve">Reserve</button>
       </div>
-    </div>
+    </div> -->
   </section>
   
+  <section class="modal_window">
+    <div class="meal-details">
+      <!-- recipe close btn -->
+      <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+        <i class="fas fa-times"></i>
+      </button>
+      <!-- meal content -->
+      <div class="meal-details-content">
+        <img src="https://www.themealdb.com/images/category/beef.png" alt="">
+        <h2 class="recipe-title">Meals Name Here</h2>
+        <p class="recipe-category">Category Name</p>
+        <div class="recipe-instruct">
+          <h3>Instructions:</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro,
+            reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit
+            autem iste!</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam,
+            esse numquam nisi ut adipisci in?</p>
+        </div>
+        <div class="comment__container" id=${item.idMeal}>
+          <h2 class="post__comment__title">Comments<span></span></h2>
+          <div class="comments">
+            <div class="comments__item post__comment">
+            </div>
+          </div>
+          <form class="comment__form">
+            <input class="input__field" type="text" id="name" placeholder="Your name">
+            <textarea class="text-area" id="input" cols="30" rows="10" placeholder="Your message"></textarea>
+            <button class="form_btn">Comment</button>
+            <div class="message">
+              <p class="success">Form successfully submited</p>
+              <p class="danger">Please fill in the form</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <a href="" class="footer__brand">
       <span class="logo">Kanban Board</span>
