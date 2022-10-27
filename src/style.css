@@ -101,7 +101,7 @@ nav {
   width: 40%;
   height: 90%;
   overflow-y: scroll;
-  display: none;
+  /* display: none; */
   padding: 2rem 0;
 }
 
