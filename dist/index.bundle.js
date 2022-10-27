@@ -115,7 +115,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n\n\n//# sourceURL=webpack://kanban-board/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_likes_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/likes.js */ \"./src/modules/likes.js\");\n/* harmony import */ var _modules_render_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/render.js */ \"./src/modules/render.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\nconst element = document.querySelector('#container');\nconst mealUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';\n\nconst fetchData = async (url) => {\n  const res = await fetch(url);\n  const data = await res.json();\n  const likes = await (0,_modules_likes_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  const storage = [];\n  data.categories.forEach((item) => {\n    storage.push({\n      ...(likes.find((innerItem) => innerItem.item_id.toString() === item.idCategory.toString())),\n      ...item,\n    });\n  });\n  return storage;\n};\n\nwindow.onload = async () => {\n  const storage = await fetchData(mealUrl);\n  (0,_modules_render_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(storage, element);\n  const likeButtons = document.querySelectorAll('.fa-heart');\n  const likeBtns = Array.from(likeButtons);\n  likeBtns.forEach((btn) => {\n    btn.addEventListener('click', async (e) => {\n      const likeContainer = e.target.parentNode.parentNode.querySelector('.show');\n      await (0,_modules_likes_js__WEBPACK_IMPORTED_MODULE_0__.addLikes)(e.target.id);\n      const newVal = +likeContainer.innerHTML + 1;\n      likeContainer.innerHTML = newVal;\n    });\n  });\n};\n\n//# sourceURL=webpack://kanban-board/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/likes.js":
+/*!******************************!*\
+  !*** ./src/modules/likes.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addLikes\": () => (/* binding */ addLikes),\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst apiUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';\nconst apiKey = 'eJ0dYt3woHnL6Sz1FyVG';\nconst getLikes = async () => {\n  const res = await fetch(`${apiUrl}/${apiKey}/likes`);\n  const data = await res.json();\n  return data;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getLikes);\nconst addLikes = async (id) => {\n  await fetch(\n    ' https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eJ0dYt3woHnL6Sz1FyVG/likes',\n    {\n      method: 'POST',\n      headers: { 'Content-type': 'application/json' },\n      body: JSON.stringify({\n        item_id: id,\n      }),\n    },\n  );\n};\n// https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eJ0dYt3woHnL6Sz1FyVG/likes\n\n\n//# sourceURL=webpack://kanban-board/./src/modules/likes.js?");
+
+/***/ }),
+
+/***/ "./src/modules/render.js":
+/*!*******************************!*\
+  !*** ./src/modules/render.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst render = (data, element) => {\n  element.innerHTML = '';\n  data.forEach((cat) => {\n    element.innerHTML += `\n      <div id=\"${cat.idCategory}\" class=\"card-a\">\n      <img src=\"${cat.strCategoryThumb}\" alt=\"Picture\">\n        <div class=\"space-like\">\n          <p>${cat.strCategory}</p>\n          <i class=\"fa fa-heart\" id=${cat.idCategory} aria-hidden=\"true\"></i>\n        </div>\n        <div class=\"like\">\n          <label for=\"text\" class=\"show\" >${cat.likes || 0}</label>\n          <label for=\"text\">Likes</label>\n        </div>\n        <div class=\"btns\">\n        <button type=\"button\" id=\"comment\" class=\"comment\">Comments</button>\n        <button type=\"button\" id=\"reserve\" class=\"reserve\">Reserve</button>\n        </div>\n        </div>\n        `;\n  });\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (render);\n\n\n//# sourceURL=webpack://kanban-board/./src/modules/render.js?");
 
 /***/ })
 
