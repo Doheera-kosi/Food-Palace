@@ -1,5 +1,26 @@
 import { addComments, getComments } from './comment.js';
 
+const fetchComments = async (id) => {
+  const cList = document.querySelector('#comment_list');
+  await getComments(id).then((data) => {
+    if (data.length > 0) {
+      const list = data.map((item) => `<li>
+        <span>${item.creation_date}</span>
+        <span>${item.username}</span>
+        <span>${item.comment}</span>
+        </li>`);
+      cList.innerHTML = list.join('');
+    } else {
+      throw Error('No comment available');
+    }
+  }).catch((error) => {
+    const list = `<li>
+      ${error.message}
+    </li>`;
+    cList.innerHTML = list;
+  });
+};
+
 const createComment = (commentID) => {
   const formBtn = document.querySelector('.form_btn');
   formBtn.addEventListener('click', () => {
@@ -11,37 +32,13 @@ const createComment = (commentID) => {
       username: name,
       comment,
     };
-    addComments(cObj).then((res) => {
+    addComments(cObj).then(() => {
       fetchComments(id);
       document.querySelector('#name').value = '';
       document.querySelector('#input').value = '';
     });
   });
 };
-
-
-const fetchComments = async (id) => {
-  const cList = document.querySelector('#comment_list');
-  await getComments(id).then((data) => {
-    if (data.length > 0) {
-      const list = data.map((item) => {
-        return `<li>
-        <span>${item.creation_date}</span>
-        <span>${item.username}</span>
-        <span>${item.comment}</span>
-        </li>`;
-      });
-      cList.innerHTML = list.join('');
-    } else {
-      throw Error('No comment available')
-    }
-  }).catch((error) => {
-    const list = `<li>
-      ${error.message}
-    </li>`;
-    cList.innerHTML = list;
-  })
-}
 
 const renderPopUp = (id, element, data) => {
   // console.log(data);
@@ -85,7 +82,7 @@ const renderPopUp = (id, element, data) => {
 `;
       fetchComments(cat.idCategory);
       createComment(cat.idCategory);
-}
+    }
   });
   const popupCloseBtn = document.querySelector('.recipe-close-btn');
   popupCloseBtn.addEventListener('click', () => {

@@ -2,6 +2,7 @@ import getLikes, { addLikes } from './modules/likes.js';
 import renderPopUp from './modules/popup.js';
 import render from './modules/render.js';
 import './style.css';
+
 const element = document.querySelector('#container');
 const popupWindow = document.querySelector('.meal-details');
 
@@ -10,7 +11,6 @@ const mealUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
 const fetchRecipes = async (url) => {
   const res = await fetch(url);
   const data = await res.json();
-  console.log(res, data);
   return data;
 };
 const fetchData = async (url) => {
@@ -20,22 +20,20 @@ const fetchData = async (url) => {
   data.categories.forEach((item) => {
     storage.push({
       ...likes.find(
-        (innerItem) =>
-          innerItem.item_id.toString() === item.idCategory.toString()
+        (innerItem) => innerItem.item_id.toString() === item.idCategory.toString(),
       ),
       ...item,
     });
   });
   return storage;
 };
+
 window.onload = async () => {
   const storage = await fetchData(mealUrl);
   render(storage, element);
   element.addEventListener('click', async (e) => {
     if (e.target.className === 'fa fa-heart') {
-      console.log('like has been clicked');
-      const likeContainer =
-        e.target.parentNode.parentNode.querySelector('.show');
+      const likeContainer = e.target.parentNode.parentNode.querySelector('.show');
       await addLikes(e.target.id);
       const newVal = +likeContainer.innerHTML + 1;
       likeContainer.innerHTML = newVal;
@@ -45,9 +43,3 @@ window.onload = async () => {
     }
   });
 };
-
-const formBtn = document.querySelector('.form_btn');
-formBtn.addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log('Hello Evans!');
-});

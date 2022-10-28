@@ -13,9 +13,9 @@ const addComments = async (data) => {
     headers: {
       'Content-type': 'application/json',
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
   return response.text();
-}
+};
 
-export {addComments, getComments}
+export { addComments, getComments };
