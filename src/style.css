@@ -110,7 +110,7 @@ nav {
   width: 40%;
   height: 90%;
   overflow-y: scroll;
-  display: none;
+  /* display: none; */
   padding: 2rem 0;
 }
 
@@ -165,7 +165,7 @@ nav {
 }
 
 .recipe-category {
-  background: #fff;
+  /* background: #fff; */
   font-weight: 600;
   color: var(--tenne-tawny);
   display: inline-block;
@@ -177,6 +177,26 @@ nav {
   -o-border-radius: 0.3rem;
   width: 100%;
   height: 2.5rem;
+}
+
+#comment_list {
+  background: #000;
+  height: 5rem;
+  margin-top: 0;
+  overflow-y: scroll;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+#comment_list li {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
 
 .recipe-instruct {

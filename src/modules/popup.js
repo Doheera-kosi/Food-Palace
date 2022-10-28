@@ -67,7 +67,6 @@ const renderPopUp = (id, element, data) => {
     <div class="meal-details-content">
     <img src=${cat.strCategoryThumb} alt="">
     <h2 class="recipe-title">${cat.strCategory}</h2>
-    <p class="recipe-category">Category Name</p>
     <div class="recipe-instruct">
       <h3>Discriptions:</h3>
       <p>${cat.strCategoryDescription}</p>
@@ -83,8 +82,8 @@ const renderPopUp = (id, element, data) => {
         </div>
       </div>
       <form action='' class="comment_form">
-        <input name='name' class="input_field" type="text" id="name" placeholder="Your name">
-        <textarea class="text-area" id="input" cols="30" rows="10" placeholder="Your message"></textarea>
+        <input name='name' class="input_field" type="text" id="name" placeholder="Your name" required>
+        <textarea class="text-area" id="input" cols="30" rows="10" placeholder="Your message" required></textarea>
         <button type='button' class="form_btn">Comment</button>
         <div class="message">
           <p class="success">Form successfully submited</p>
