@@ -13,8 +13,8 @@ const render = (data, element) => {
           <label for="text">Likes</label>
         </div>
         <div class="btns">
-        <button type="button" id="comment" class="comment">Comments</button>
-        <button type="button" id="reserve" class="reserve">Reserve</button>
+        <button type="button" id=${cat.idCategory} class="reserve">Reserve</button>
+        <button type="button" id=${cat.idCategory} class="comment">Comments</button>
         </div>
         </div>
         `;
