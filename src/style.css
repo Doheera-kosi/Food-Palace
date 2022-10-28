@@ -33,13 +33,12 @@ nav {
 }
 
 .card-a {
-
   display: flex;
   flex-direction: column;
   border: 1px solid gold;
   width: 70%;
   padding: 2rem 1rem;
-  margin: 1rem 0rem;
+  margin: 1rem 0;
   gap: 1rem;
   border-radius: 20px;
   transition: 1s;
@@ -89,7 +88,7 @@ nav {
 .reserve:hover,
 .comment:hover {
   border-radius: 0.4rem;
-  box-shadow: 2px 2px 2px 0px;
+  box-shadow: 2px 2px 2px 0;
 }
 
 .meal-details {
@@ -120,7 +119,7 @@ nav {
 }
 
 .meal-details::-webkit-scrollbar-thumb {
-  background: #F0F0F0;
+  background: #f0f0f0;
   border-radius: 2rem;
   -webkit-border-radius: 2rem;
   -moz-border-radius: 2rem;
