@@ -4,7 +4,9 @@ import render from './modules/render.js';
 import './style.css';
 const element = document.querySelector('#container');
 const popupWindow = document.querySelector('.meal-details');
+
 const mealUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+
 const fetchRecipes = async (url) => {
   const res = await fetch(url);
   const data = await res.json();
@@ -43,3 +45,9 @@ window.onload = async () => {
     }
   });
 };
+
+const formBtn = document.querySelector('.form_btn');
+formBtn.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('Hello Evans!');
+});
