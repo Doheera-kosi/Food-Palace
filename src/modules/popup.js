@@ -1,18 +1,34 @@
 import { addComments, getComments } from './comment.js';
+import commentCounter from './commentCounter.js';
+
+let comments = [];
+
+const getComCounter = () => {
+  const span = document.querySelector('#commentCounter');
+  const comList = document.querySelector('#comment_list');
+  const result = commentCounter(comList.children);
+  if (comments.length > 0) {
+    span.innerHTML = result;
+  }
+};
 
 const fetchComments = async (id) => {
   const cList = document.querySelector('#comment_list');
   await getComments(id).then((data) => {
     if (data.length > 0) {
-      const list = data.map((item) => `<li>
+      comments = data;
+      const list = comments.map((item) => `<li>
         <span>${item.creation_date}</span>
         <span>${item.username}</span>
         <span>${item.comment}</span>
         </li>`);
       cList.innerHTML = list.join('');
     } else {
+      const span = document.querySelector('#commentCounter');
+      span.innerHTML = '0';
       throw Error('No comment available');
     }
+    getComCounter();
   }).catch((error) => {
     const list = `<li>
       ${error.message}
@@ -41,7 +57,6 @@ const createComment = (commentID) => {
 };
 
 const renderPopUp = (id, element, data) => {
-  // console.log(data);
   element.style.display = 'flex';
   data.categories.forEach((cat) => {
     if (id.toString() === cat.idCategory.toString()) {
@@ -62,7 +77,7 @@ const renderPopUp = (id, element, data) => {
     <div class="comment__container">
     <p class="recipe-category"></p>
     <ul id='comment_list'></ul>
-      <h2 class="post__comment__title">Comments<span></span></h2>
+      <h2 class="post__comment__title">Comments (<span id='commentCounter'></span>)</h2>
       <div class="comments">
         <div class="comments__item post__comment">
         </div>
@@ -84,6 +99,7 @@ const renderPopUp = (id, element, data) => {
       createComment(cat.idCategory);
     }
   });
+  // const comList = document.querySelector('#comment_list');
   const popupCloseBtn = document.querySelector('.recipe-close-btn');
   popupCloseBtn.addEventListener('click', () => {
     element.style.display = 'none';
