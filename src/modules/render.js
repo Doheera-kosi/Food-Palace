@@ -22,11 +22,11 @@ const render = (data, element) => {
         </div>
         <div class="btns">
         <button type="button" id=${
-          cat.idCategory
-        } class="reserve">Reserve</button>
+  cat.idCategory
+} class="reserve">Reserve</button>
         <button type="button" id=${
-          cat.idCategory
-        } class="comment">Comments</button>
+  cat.idCategory
+} class="comment">Comments</button>
         </div>
         </div>
         `;

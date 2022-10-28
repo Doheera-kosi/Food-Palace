@@ -1,5 +1,5 @@
 const likesCounter = (array) => {
-  const length = array.length;
+  const { length } = array;
   return length;
 };
 

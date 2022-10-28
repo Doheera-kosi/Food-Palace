@@ -20,8 +20,7 @@ const fetchData = async (url) => {
   data.categories.forEach((item) => {
     storage.push({
       ...likes.find(
-        (innerItem) =>
-          innerItem.item_id.toString() === item.idCategory.toString()
+        (innerItem) => innerItem.item_id.toString() === item.idCategory.toString(),
       ),
       ...item,
     });
@@ -34,8 +33,7 @@ window.onload = async () => {
   render(storage, element);
   element.addEventListener('click', async (e) => {
     if (e.target.className === 'fa fa-heart') {
-      const likeContainer =
-        e.target.parentNode.parentNode.querySelector('.show');
+      const likeContainer = e.target.parentNode.parentNode.querySelector('.show');
       await addLikes(e.target.id);
       const newVal = +likeContainer.innerHTML + 1;
       likeContainer.innerHTML = newVal;
