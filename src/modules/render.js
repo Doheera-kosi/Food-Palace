@@ -1,4 +1,4 @@
-import likesCounter from './likesCounter.js';
+import likesCounter from './itemsCounter.js';
 
 const getlikesCounter = (item) => {
   const span = document.querySelector('#likesCounter');
