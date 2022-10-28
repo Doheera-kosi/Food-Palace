@@ -1,3 +1,11 @@
+import likesCounter from './likesCounter.js';
+
+const getlikesCounter = (item) => {
+  const span = document.querySelector('#likesCounter');
+  const result = likesCounter(item);
+  span.textContent = result;
+};
+
 const render = (data, element) => {
   element.innerHTML = '';
   data.forEach((cat) => {
@@ -13,11 +21,16 @@ const render = (data, element) => {
           <label for="text">Likes</label>
         </div>
         <div class="btns">
-        <button type="button" id=${cat.idCategory} class="reserve">Reserve</button>
-        <button type="button" id=${cat.idCategory} class="comment">Comments</button>
+        <button type="button" id=${
+  cat.idCategory
+} class="reserve">Reserve</button>
+        <button type="button" id=${
+  cat.idCategory
+} class="comment">Comments</button>
         </div>
         </div>
         `;
   });
+  getlikesCounter(element.children);
 };
 export default render;
