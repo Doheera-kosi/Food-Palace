@@ -2,7 +2,6 @@ import getLikes, { addLikes } from './modules/likes.js';
 import renderPopUp from './modules/popup.js';
 import render from './modules/render.js';
 import './style.css';
-
 const element = document.querySelector('#container');
 const popupWindow = document.querySelector('.meal-details');
 
@@ -14,27 +13,29 @@ const fetchRecipes = async (url) => {
   console.log(res, data);
   return data;
 };
-
 const fetchData = async (url) => {
   const data = await fetchRecipes(url);
   const likes = await getLikes();
   const storage = [];
   data.categories.forEach((item) => {
     storage.push({
-      ...(likes.find((innerItem) => innerItem.item_id.toString() === item.idCategory.toString())),
+      ...likes.find(
+        (innerItem) =>
+          innerItem.item_id.toString() === item.idCategory.toString()
+      ),
       ...item,
     });
   });
   return storage;
 };
-
 window.onload = async () => {
   const storage = await fetchData(mealUrl);
   render(storage, element);
   element.addEventListener('click', async (e) => {
     if (e.target.className === 'fa fa-heart') {
       console.log('like has been clicked');
-      const likeContainer = e.target.parentNode.parentNode.querySelector('.show');
+      const likeContainer =
+        e.target.parentNode.parentNode.querySelector('.show');
       await addLikes(e.target.id);
       const newVal = +likeContainer.innerHTML + 1;
       likeContainer.innerHTML = newVal;
@@ -44,3 +45,9 @@ window.onload = async () => {
     }
   });
 };
+
+const formBtn = document.querySelector('.form_btn');
+formBtn.addEventListener('submit', (e) => {
+  e.preventDefault();
+  console.log('Hello Evans!');
+});
