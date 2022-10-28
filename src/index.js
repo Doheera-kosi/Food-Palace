@@ -44,9 +44,3 @@ window.onload = async () => {
     }
   });
 };
-
-const formBtn = document.querySelector('.form_btn');
-formBtn.addEventListener('submit', (e) => {
-  e.preventDefault();
-  console.log('Hello Evans!');
-});
