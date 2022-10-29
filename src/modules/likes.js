@@ -18,4 +18,3 @@ export const addLikes = async (id) => {
     },
   );
 };
-// https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/eJ0dYt3woHnL6Sz1FyVG/likes

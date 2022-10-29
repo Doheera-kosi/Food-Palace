@@ -39,6 +39,11 @@
 - Modify to your taste with your preferred text editor
 - Enjoy 🤗
 
+## APIs Used
+- [Meals DB: data about meals.](https://www.themealdb.com/api.php)
+## Documentation for Involvement API
+- [Involvement API.](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270)
+
 
 
 ## Authors

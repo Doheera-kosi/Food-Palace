@@ -98,7 +98,6 @@ const renderPopUp = (id, element, data) => {
       createComment(cat.idCategory);
     }
   });
-  // const comList = document.querySelector('#comment_list');
   const popupCloseBtn = document.querySelector('.recipe-close-btn');
   popupCloseBtn.addEventListener('click', () => {
     element.style.display = 'none';
