@@ -32,6 +32,7 @@
 - [x] HTML
 - [x] CSS
 - [x] JavaScript
+- [x] Bundle Webpack
 
 ### Frameworks
 - None
@@ -39,28 +40,20 @@
 - None
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+## [Live Demo Link](https://livedemo.com)
+
+## [Recorded Video](https://drive.google.com/file/d/1cV0b2Cw-4z50xmHE8tuCtcjFJZ-775b2/view?usp=sharing)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+### To get a local copy up and running follow these simple example steps.
 
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- Clone the repo to your local environment
+- Run npm install to install all dependencies
+- Open the index.html file with your favorite browser.
+- Modify to your taste with your preferred text editor
+- Enjoy 🤗
 
 
 
@@ -74,9 +67,10 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@teke85](https://github.com/teke85)
+- Twitter: [@muttau](https://twitter.com/muttau)
+- LinkedIn: [isiteketo mutau](https://www.linkedin.com/in/isiteketo-mutau-736894241/)
+
 
 ## 🤝 Contributing
 
