@@ -23,7 +23,7 @@ const fetchComments = async (id) => {
         <span>${item.creation_date}</span>
         <span>${item.username}</span>
         <span>${item.comment}</span>
-        </li>`
+        </li>`,
         );
         cList.innerHTML = list.join('');
       } else {

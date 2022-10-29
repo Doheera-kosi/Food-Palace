@@ -1,27 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name: JavaScript capstone project - Your API-based webapp
-
-## Milestone Reached - Learning objectives
-- Use JavaScript to make websites dynamic and build basic single page apps.
-- Use ES6 syntax.
-- Use ES6 modules.
-- Use callbacks and promises.
-- Use webpack.
-- Apply JavaScript best practices and language style guides in code.
-- Use AAA pattern for unit tests.
-- Write units tests for a JavaScript app.
-- Follow Gitflow.
-- Solve simple git conflicts.
-- Send and receive data from an API.
-- Use API documentation.
-- Understand and use JSON.
-- Make JavaScript code asynchronous.
-- Perform a code review for a team member.
+# Project Name: JavaScript capstone project - Food Palace
 
 ## Description the project.
-> This JavaScript capstone project (remember what they are?) is about building your own web application based on an external API. We will use a selected API that provides data about a topic that we like and then build the webapp around it. This webapp is have 2 or 3 user interfaces (depending on the size of your team):
+> This JavaScript capstone project was based on building our own web application based on an external API.
 
+## Below are some of the task we implemented based on the project requirement;
 - [x] A home page showing a list of items that you can "like."
 - [x] A popup window with more data about an item that you can use to comment on it or reserve it   for a period of time.
 
@@ -40,7 +24,7 @@
 - None
 ## Live Demo (if available)
 
-## [Live Demo Link](https://livedemo.com)
+## [Live Demo Link](https://doheera-kosi.github.io/Food-Palace/dist/)
 
 ## [Recorded Video](https://drive.google.com/file/d/1cV0b2Cw-4z50xmHE8tuCtcjFJZ-775b2/view?usp=sharing)
 
