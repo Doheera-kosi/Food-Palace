@@ -14,6 +14,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .nav_items {
@@ -31,6 +32,17 @@ nav {
   padding: 1rem;
   place-items: center;
 }
+
+/* @media only screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    margin: 5rem auto;
+    padding: 1rem;
+    place-items: center;
+  }
+} */
 
 .card-a {
   display: flex;
@@ -179,6 +191,14 @@ nav {
   height: 2.5rem;
 }
 
+.post__comment__title {
+  margin-bottom: 0.5rem;
+}
+
+.comment__container {
+  padding-bottom: 0.9rem;
+}
+
 #comment_list {
   background: #000;
   height: 5rem;
@@ -243,8 +263,8 @@ nav {
   gap: 1rem;
 }
 
-.input__field {
-  height: 2rem;
+.input_field {
+  height: 1.5rem;
   width: 40%;
 }
 
@@ -256,6 +276,13 @@ nav {
 .form_btn {
   height: 2rem;
   width: 100%;
+}
+
+/* Form */
+.comment_form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 footer {

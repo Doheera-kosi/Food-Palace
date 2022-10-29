@@ -14,27 +14,31 @@ const getComCounter = () => {
 
 const fetchComments = async (id) => {
   const cList = document.querySelector('#comment_list');
-  await getComments(id).then((data) => {
-    if (data.length > 0) {
-      comments = data;
-      const list = comments.map((item) => `<li>
+  await getComments(id)
+    .then((data) => {
+      if (data.length > 0) {
+        comments = data;
+        const list = comments.map(
+          (item) => `<li>
         <span>${item.creation_date}</span>
         <span>${item.username}</span>
         <span>${item.comment}</span>
-        </li>`);
-      cList.innerHTML = list.join('');
-    } else {
-      const span = document.querySelector('#commentCounter');
-      span.innerHTML = '0';
-      throw Error('No comment available');
-    }
-    getComCounter();
-  }).catch((error) => {
-    const list = `<li>
+        </li>`
+        );
+        cList.innerHTML = list.join('');
+      } else {
+        const span = document.querySelector('#commentCounter');
+        span.innerHTML = '0';
+        throw Error('No comment available');
+      }
+      getComCounter();
+    })
+    .catch((error) => {
+      const list = `<li>
       ${error.message}
     </li>`;
-    cList.innerHTML = list;
-  });
+      cList.innerHTML = list;
+    });
 };
 
 const createComment = (commentID) => {
@@ -85,10 +89,6 @@ const renderPopUp = (id, element, data) => {
         <input name='name' class="input_field" type="text" id="name" placeholder="Your name" required>
         <textarea class="text-area" id="input" cols="30" rows="10" placeholder="Your message" required></textarea>
         <button type='button' class="form_btn">Comment</button>
-        <div class="message">
-          <p class="success">Form successfully submited</p>
-          <p class="danger">Please fill in the form</p>
-        </div>
       </form>
 
     </div>
